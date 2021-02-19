@@ -5,8 +5,14 @@
 
   <div class="panel-body">
     <div class="form-group">
-      <label>Name</label>
-      <input class="form-control" name="name" />
+      <label>E-postadress.</label>
+      <input class="form-control" name="email" value="<%- currentUserEmail %>" type="email" required />
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label>Max antal tillåtna annonser.</label>
+      <input class="form-control" name="maxads" placeholder="Ange ett tal." type="number" required />
     </div>
   </div>
 </div>
