@@ -5,5 +5,8 @@
   "author": "Oscar Andersson, Soleil",
   "description": "En annonsplats för användarna av denna webbplats. Här ska användarna kunna lägga ut saker till försäljning.",
   "helpUrl": "https://github.com/oscar230",
-  "type": "WebApp"
+  "type": "WebApp",
+  "storage": {
+    "collectionDataStore": "ads"
+  }
 }

@@ -4,5 +4,8 @@
    "showingSome": "Detta är en lista med ett urval annonser.",
    "amount": "Antal annonser som visas: ",
    "amountTotal": "Antal annonser total: ",
-   "showAll": "Visa alla annonser"
+   "showAll": "Visa alla annonser",
+   "added": "Annons tillagd.",
+   "addAnother": "Lägg till annu en annons.",
+   "add": "Lägg till en annons."
 }

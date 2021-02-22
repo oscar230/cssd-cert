@@ -4,5 +4,8 @@
    "showingSome": "This is a list of some ads.",
    "amount": "Amount of ads in the list: ",
    "amountTotal": "Total amount of ads: ",
-   "showAll": "Show all ads"
+   "showAll": "Show all ads",
+   "added": "Ad added.",
+   "addAnother": "Add another ad.",
+   "add": "Add an ad."
 }
