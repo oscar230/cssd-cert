@@ -1,0 +1,9 @@
+{
+  "id": "upg2-ad",
+  "version": "0.0.1",
+  "name": "Annonsplats",
+  "author": "Oscar Andersson, Soleil",
+  "description": "En annonsplats för användarna av denna webbplats. Här ska användarna kunna lägga ut saker till försäljning.",
+  "helpUrl": "https://github.com/oscar230",
+  "type": "WebApp"
+}
