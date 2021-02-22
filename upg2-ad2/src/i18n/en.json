@@ -1,3 +1,8 @@
 {
-   "hello": "Hello"
+   "title": "Ad viewer!",
+   "showingAll": "This is a list of all ads.",
+   "showingSome": "This is a list of some ads.",
+   "amount": "Amount of ads in the list: ",
+   "amountTotal": "Total amount of ads: ",
+   "showAll": "Show all ads"
 }

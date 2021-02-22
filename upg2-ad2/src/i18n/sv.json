@@ -1,3 +1,8 @@
 {
-   "hello": "Hej"
+   "title": "Annonsvisare!",
+   "showingAll": "Detta är en lista med alla annonser.",
+   "showingSome": "Detta är en lista med ett urval annonser.",
+   "amount": "Antal annonser som visas: ",
+   "amountTotal": "Antal annonser total: ",
+   "showAll": "Visa alla annonser"
 }

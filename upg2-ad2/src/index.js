@@ -1,16 +1,15 @@
-(function () {
-  'use strict';
-
+/* eslint-disable import/no-unresolved */
+/* eslint-disable global-require */
+(function init() {
   const router = require('router');
-  const appData = require('appData');
+  const i18n = require('i18n');
 
   router.get('/', (req, res) => {
-    const message = 'Hello, world!';
-    const name = appData.get('name');
-
+    const title = i18n.get('title');
+    const message = i18n.get('showingAll');
     res.render('/', {
+      title,
       message,
-      name,
     });
   });
-})();
+}());
