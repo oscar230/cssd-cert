@@ -8,18 +8,18 @@ define((require) => {
   const MAX = 100;
 
   return {
-    get(id) {
+    get: (id) => {
       try {
-        if (typeof id !== 'undefined') {
-          return ads.get(id);
+        if (typeof id === 'string') {
+          return ads.get(id).toArray();
         }
-        return ads.find('*', parseInt(MAX, 10));
+        return ads.find('*', parseInt(MAX, 10)).toArray();
       } catch (e) {
         logUtil.error(e);
         return false;
       }
     },
-    search(term) {
+    search: (term) => {
       try {
         return ads.find(term, parseInt(MAX, 10));
       } catch (e) {
@@ -27,7 +27,7 @@ define((require) => {
         return false;
       }
     },
-    add(ad) {
+    add: (ad) => {
       try {
         const data = ads.add(ad);
         ads.instantIndex(data.dsid);
@@ -37,7 +37,7 @@ define((require) => {
         return false;
       }
     },
-    edit(id, ad) {
+    edit: (id, ad) => {
       try {
         ads.set(id, ad);
         return true;
@@ -46,7 +46,7 @@ define((require) => {
         return false;
       }
     },
-    remove(id) {
+    remove: (id) => {
       try {
         ads.remove(id).instantIndex();
         return true;

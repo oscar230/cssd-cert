@@ -1,11 +1,20 @@
 {
    "title": "Annonsvisare!",
    "showingAll": "Detta är en lista med alla annonser.",
+   "showingAllAdded": "Lade till ny annons. Detta är en lista med alla annonser.",
+   "showingAllEdited": "Redigerade annons. Detta är en lista med alla annonser.",
    "showingSome": "Detta är en lista med ett urval annonser.",
    "amount": "Antal annonser som visas: ",
    "amountTotal": "Antal annonser total: ",
    "showAll": "Visa alla annonser",
+   "show": "Visa",
+   "edit": "Redigera",
+   "remove": "Ta bort",
    "added": "Annons tillagd.",
    "addAnother": "Lägg till annu en annons.",
-   "add": "Lägg till en annons."
+   "add": "Lägg till en annons.",
+   "adTitle": "Annonstitel.",
+   "adMessage": "Annonsmeddelande.",
+   "adLink": "Annonslänk.",
+   "gotoLink": "Följ länk."
 }

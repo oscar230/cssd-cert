@@ -1,8 +1,28 @@
 <h1><%= title %></h1>
 <p><%= message %></p>
-<form>
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
+<form class="env-form" action="<%= getUrl('/add') %>" method="post">
+    <div class="env-form">
+        <div class="env-form-element">
+        <label for="text" class="env-form-element__label"><%= i18n('adTitle') %></label>
+        <div class="env-form-element__control">
+            <input type="text" class="env-form-input" id="text" name="title" placeholder="<%= adTitle %>" />
+        </div>
+        </div>
+        <div class="env-form-element">
+        <label for="textarea" class="env-form-element__label"><%= i18n('adMessage') %></label>
+        <div class="env-form-element__control">
+            <textarea class="env-form-input" id="textarea" name="content" rows="3" placeholder="<%= adMessage %>"></textarea>
+        </div>
+        </div>
+        <div class="env-form-element">
+            <label for="text" class="env-form-element__label"><%= i18n('adLink') %></label>
+            <div class="env-form-element__control">
+            <input type="text" class="env-form-input" id="text" name="link" placeholder="<%= adLink %>" />
+            </div>
+        </div>
+        <div class="env-form-element">
+            <input class="env-button env-button--primary" type="submit" value="Spara Ändringar" />
+            <a href="<%= getUrl('/') %>" class="env-button env-button--secondary"><%= i18n('showAll') %></a>
+        </div>
+    </div>
 </form>

@@ -8,6 +8,7 @@ define((require) => {
   const addTemplate = require('/template/add');
 
   return Component.extend({
+    // Selector for templates based on route
     getTemplate() {
       if (this.state.route === '/added') {
         return addedTemplate;
@@ -19,6 +20,6 @@ define((require) => {
       return template;
     },
     className: 'upg2-ad2',
-    filterState: ({ route, title, message }) => ({ route, title, message }),
+    filterState: ({ route }) => ({ route }),
   });
 });

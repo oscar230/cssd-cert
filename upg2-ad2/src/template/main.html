@@ -1,3 +1,15 @@
-<h1><%= title %></h1>
-<p><%= message %></p>
-<%= renderer.renderComponent('Ads') %>
+<h1><%= i18n('title') %></h1>
+<p><%= i18n('message') %></p>
+<button href="<%= getUrl('/add') %>" type="button" class="env-button env-button--primary"><%= i18n('add') %></button>
+<table class="env-table env-table--zebra env-table--borders-bottom">
+    <thead>
+        <tr>
+            <th><%= i18n('adTitle') %></th>
+            <th><%= i18n('adMessage') %></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= renderer.renderComponent('Ads') %>
+    </tbody>
+</table>

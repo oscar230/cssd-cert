@@ -4,9 +4,8 @@ define((require) => {
   const ListComponent = require('ListComponent');
 
   return ListComponent.extend({
-    tagName: 'ul',
-    childProperty: 'ads',
+    childProperty: 'adList',
     childComponentPath: 'Ad',
-    filterState: ({ ads }) => ({ ads }),
+    filterState: ({ adList }) => ({ adList }),
   });
 });

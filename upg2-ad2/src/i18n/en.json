@@ -1,11 +1,19 @@
 {
    "title": "Ad viewer!",
    "showingAll": "This is a list of all ads.",
+   "showingAllAdded": "Added a new ad! This is a list of all ads.",
+   "showingAllEdited": "Edited an ad! This is a list of all ads.",
    "showingSome": "This is a list of some ads.",
    "amount": "Amount of ads in the list: ",
    "amountTotal": "Total amount of ads: ",
    "showAll": "Show all ads",
+   "show": "Show ad",
+   "edit": "Edit",
+   "remove": "Remove",
    "added": "Ad added.",
    "addAnother": "Add another ad.",
-   "add": "Add an ad."
+   "add": "Add an ad",
+   "adTitle": "Ad title",
+   "adMessage": "Ad message",
+   "adLink": "Ad link"
 }

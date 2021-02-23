@@ -3,33 +3,52 @@
 /* eslint-disable global-require */
 (function init() {
   const router = require('router');
-  const i18n = require('i18n');
   const ads = require('/module/server/ds');
 
+  // HTML for all list and ROOT
   router.get('/', (req, res) => {
+    const adList = ads.get();
     res.render('/', {
-      title: i18n.get('title'),
-      message: i18n.get('showingAll'),
+      adList,
+      adListLength: ads.length,
     });
   });
 
-  router.get('/:id', (req, res) => {
+  // HTML get one specfic
+  router.get('/ad/:id', (req, res) => {
     res.render('/', {
-      title: i18n.get('title'),
-      message: i18n.get('showingSome'),
       id: req.params.id,
     });
   });
 
-  router.post('/', (req, res) => {
+  // HTML for adding
+  router.get('/add', (req, res) => {
+    res.render('/add');
+  });
+
+  // DS Add
+  router.post('/add', (req, res) => {
     ads.add({
       title: req.params.title,
       content: req.params.content,
-      link: (new URL(req.params.link)).href,
+      link: req.params.link,
     });
-    res.render('/posted', {
-      title: i18n.get('title'),
-      message: i18n.get('added'),
+    res.redirect('/');
+  });
+
+  // DS Edit
+  router.post('/edit', (req, res) => {
+    ads.edit(req.params.id, {
+      title: req.params.title,
+      content: req.params.content,
+      link: req.params.link,
     });
+    res.redirect('/');
+  });
+
+  // DS Remove
+  router.post('/remove', (req, res) => {
+    ads.remove(req.params.id);
+    res.redirect('/');
   });
 }());
