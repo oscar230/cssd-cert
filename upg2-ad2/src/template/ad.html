@@ -2,8 +2,8 @@
 <td><%= content %></td>
 <td>
     <div class="env-button-group" role="group">
-        <button type="button" class="env-button env-button--primary"><%= i18n('show') %></button>
-        <button type="button" class="env-button env-button--secondary"><%= i18n('edit') %></button>
-        <button type="button" class="env-button env-button--secondary"><%= i18n('remove') %></button>
+        <a href="<%= getUrl('/remove', { id:dsid }) %>" type="button" class="env-button env-button--primary"><%= i18n('show') %></a>
+        <a type="button" class="env-button env-button--secondary"><%= i18n('edit') %></a>
+        <a type="button" class="env-button env-button--secondary"><%= i18n('remove') %></a>
     </div>
 </td>
