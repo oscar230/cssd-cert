@@ -22,5 +22,6 @@
    "configEmail": "Annonsplatsansvariges kontaktinformation",
    "configNumber": "Max antal annonser en användare får ha publicerade samtidigt",
    "adPrice": "Pris",
-   "adImageLink": "Länk till bild"
+   "adImageLink": "Länk till bild",
+   "rnd": "Slumpgenerera en annons"
 }

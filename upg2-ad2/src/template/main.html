@@ -1,7 +1,12 @@
 <h1 class="env-text"><%= i18n('title') %></h1>
 <p class="env-text"><%= i18n('message') %></p>
-<a href="<%= getUrl('/add') %>" class="env-button env-button--primary"><%= i18n('add') %></a>
-<table class="env-table env-table--zebra env-table--borders-bottom">
+<div class="env-w--100 env-d--flex env-flex-wrap--wrap">
+    <a href="<%= getUrl('/add') %>" class="env-button env-button--primary"><%= i18n('add') %></a>
+    <form action="<%= getUrl('/rnd') %>" method="post">
+        <button type="submit" name="id" class="env-button env-button"><%= i18n('rnd') %></button>
+    </form>
+</div>
+<table class="env-table env-table--zebra env-table--borders-bottom" style="width: 100%;">
     <thead>
         <tr>
             <th><p class="env-text"><%= i18n('adTitle') %></p></th>

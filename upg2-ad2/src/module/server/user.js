@@ -6,9 +6,18 @@ define((require) => {
   const logUtil = require('LogUtil');
 
   return {
-    currentUser: () => {
+    currentUserName: () => {
       try {
-        return PCU.getCurrentUserIdentity();
+        return PCU.getCurrentUserIdentity().toString();
+      } catch (e) {
+        logUtil.error(e);
+        return e;
+      }
+    },
+
+    currentUserId: () => {
+      try {
+        return PCU.getCurrentUser().toString();
       } catch (e) {
         logUtil.error(e);
         return e;
