@@ -7,17 +7,15 @@
 
   // HTML for all list and ROOT
   router.get('/', (req, res) => {
-    const adList = ads.get();
     res.render('/', {
-      adList,
-      adListLength: ads.length,
+      adList: ads.get(),
     });
   });
 
   // HTML get one specfic
   router.get('/ad/:id', (req, res) => {
-    res.render('/', {
-      id: req.params.id,
+    res.render('/ad', {
+      ad: ads.get(req.params.id),
     });
   });
 

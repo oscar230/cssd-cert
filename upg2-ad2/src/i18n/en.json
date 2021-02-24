@@ -10,10 +10,13 @@
    "show": "Show ad",
    "edit": "Edit",
    "remove": "Remove",
-   "added": "Ad added.",
-   "addAnother": "Add another ad.",
+   "added": "Ad added",
+   "addAnother": "Add another ad",
    "add": "Add an ad",
    "adTitle": "Ad title",
    "adMessage": "Ad message",
-   "adLink": "Ad link"
+   "adLink": "Ad link",
+   "report": "Report abuse",
+   "control": "Control panel",
+   "back": "Back"
 }

@@ -10,13 +10,13 @@ define((require) => {
   return {
     get: (id) => {
       try {
-        if (typeof id === 'string') {
-          return ads.get(id).toArray();
+        if (typeof id !== 'undefined') {
+          return ads.get(id);
         }
         return ads.find('*', parseInt(MAX, 10)).toArray();
       } catch (e) {
         logUtil.error(e);
-        return false;
+        return e;
       }
     },
     search: (term) => {
@@ -24,7 +24,7 @@ define((require) => {
         return ads.find(term, parseInt(MAX, 10));
       } catch (e) {
         logUtil.error(e);
-        return false;
+        return e;
       }
     },
     add: (ad) => {
@@ -34,7 +34,7 @@ define((require) => {
         return true;
       } catch (e) {
         logUtil.error(e);
-        return false;
+        return e;
       }
     },
     edit: (id, ad) => {
@@ -43,7 +43,7 @@ define((require) => {
         return true;
       } catch (e) {
         logUtil.error(e);
-        return false;
+        return e;
       }
     },
     remove: (id) => {
@@ -52,7 +52,7 @@ define((require) => {
         return true;
       } catch (e) {
         logUtil.error(e);
-        return false;
+        return e;
       }
     },
   };

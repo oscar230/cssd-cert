@@ -10,11 +10,13 @@
    "show": "Visa",
    "edit": "Redigera",
    "remove": "Ta bort",
-   "added": "Annons tillagd.",
-   "addAnother": "Lägg till annu en annons.",
-   "add": "Lägg till en annons.",
-   "adTitle": "Annonstitel.",
-   "adMessage": "Annonsmeddelande.",
-   "adLink": "Annonslänk.",
-   "gotoLink": "Följ länk."
+   "added": "Annons tillagd",
+   "addAnother": "Lägg till annu en annons",
+   "add": "Lägg till en annons",
+   "adTitle": "Annonstitel",
+   "adMessage": "Annonsmeddelande",
+   "adLink": "Annonslänk",
+   "report": "Rapportera missbruk",
+   "control": "Control panel",
+   "back": "Tillbaka"
 }

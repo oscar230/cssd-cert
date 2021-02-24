@@ -4,7 +4,6 @@
 define((require) => {
   const Component = require('Component');
   const template = require('/template/ad');
-
   return Component.extend({
     tagName: 'tr',
     template,

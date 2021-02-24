@@ -4,17 +4,17 @@
 define((require) => {
   const Component = require('Component');
   const template = require('/template/main');
-  const addedTemplate = require('/template/added');
+  const displayTemplate = require('/template/display');
   const addTemplate = require('/template/add');
 
   return Component.extend({
     // Selector for templates based on route
     getTemplate() {
-      if (this.state.route === '/added') {
-        return addedTemplate;
-      }
       if (this.state.route === '/add') {
         return addTemplate;
+      }
+      if (this.state.route === '/ad') {
+        return displayTemplate;
       }
       // Fallback
       return template;

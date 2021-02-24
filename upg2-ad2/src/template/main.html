@@ -1,12 +1,11 @@
-<h1><%= i18n('title') %></h1>
-<p><%= i18n('message') %></p>
-<a href="<%= getUrl('/add') %>"><%= i18n('add') %></a>
+<h1 class="env-text"><%= i18n('title') %></h1>
+<p class="env-text"><%= i18n('message') %></p>
+<a href="<%= getUrl('/add') %>" class="env-button env-button--primary"><%= i18n('add') %></a>
 <table class="env-table env-table--zebra env-table--borders-bottom">
     <thead>
         <tr>
-            <th><%= i18n('adTitle') %></th>
-            <th><%= i18n('adMessage') %></th>
-            <th></th>
+            <th><p class="env-text"><%= i18n('adTitle') %></p></th>
+            <th><p class="env-text"><%= i18n('control') %></p></th>
         </tr>
     </thead>
     <tbody>

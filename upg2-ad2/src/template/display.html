@@ -1,0 +1,15 @@
+<h1 class="env-text"><%= i18n('title') %></h1>
+<form class="env-form" action="<%= getUrl('/add') %>" method="post">
+    <div class="env-form">
+        <div class="env-form-element">
+            <a href="<%= getUrl('/') %>" class="env-button env-button--secondary"><%= i18n('showAll') %></a>
+        </div>
+    </div>
+</form>
+<hr>
+<h2 class="env-text"><%= ad.title %></h2>
+<p class="env-text"><%= ad.content %></p>
+<img
+    src="https://unsplash.it/900/400/"
+    alt="Image"
+/>
