@@ -4,6 +4,7 @@
 (function init() {
   const router = require('router');
   const ads = require('/module/server/ds');
+  const user = require('/module/server/user');
 
   // HTML for all list and ROOT
   router.get('/', (req, res) => {
@@ -30,6 +31,9 @@
       title: req.params.title,
       content: req.params.content,
       link: req.params.link,
+      price: req.params.price,
+      imageLink: req.params.imageLink,
+      contact: user.currentUser(),
     });
     res.redirect('/');
   });
@@ -40,6 +44,8 @@
       title: req.params.title,
       content: req.params.content,
       link: req.params.link,
+      price: req.params.price,
+      imageLink: req.params.imageLink,
     });
     res.redirect('/');
   });

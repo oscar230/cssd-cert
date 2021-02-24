@@ -16,6 +16,6 @@
     "transpile": true
   },
   "devDependencies": {
-    "@soleil/eslint-config-sitevision": "^2.2.1"
+    "@soleil/eslint-config-sitevision": "^2.3.1"
   }
 }

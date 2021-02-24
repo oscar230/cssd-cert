@@ -2,24 +2,42 @@
 <p><%= i18n('message') %></p>
 <form class="env-form" action="<%= getUrl('/add') %>" method="post">
     <div class="env-form">
+        <!-- TITLE -->
         <div class="env-form-element">
-        <label for="text" class="env-form-element__label"><%= i18n('adTitle') %></label>
-        <div class="env-form-element__control">
-            <input type="text" class="env-form-input" id="text" name="title" placeholder="<%= i18n('adTitle') %>" />
+            <label for="text" class="env-form-element__label"><%= i18n('adTitle') %></label>
+            <div class="env-form-element__control">
+                <input type="text" class="env-form-input" id="text" name="title" placeholder="<%= i18n('adTitle') %>" />
+            </div>
         </div>
-        </div>
+        <!-- CONTENT -->
         <div class="env-form-element">
-        <label for="textarea" class="env-form-element__label"><%= i18n('adMessage') %></label>
-        <div class="env-form-element__control">
-            <textarea class="env-form-input" id="textarea" name="content" rows="3" placeholder="<%= i18n('adMessage') %>"></textarea>
+            <label for="textarea" class="env-form-element__label"><%= i18n('adMessage') %></label>
+            <div class="env-form-element__control">
+                <textarea class="env-form-input" id="textarea" name="content" rows="3" placeholder="<%= i18n('adMessage') %>"></textarea>
+            </div>
         </div>
-        </div>
+        <!-- AD LINK -->
         <div class="env-form-element">
             <label for="text" class="env-form-element__label"><%= i18n('adLink') %></label>
             <div class="env-form-element__control">
-            <input type="text" class="env-form-input" id="text" name="link" placeholder="<%= i18n('adLink') %>" />
+                <input type="text" class="env-form-input" id="text" name="link" placeholder="<%= i18n('adLink') %>" />
             </div>
         </div>
+        <!-- IMAGE LINK -->
+        <div class="env-form-element">
+            <label for="text" class="env-form-element__label"><%= i18n('adImageLink') %></label>
+            <div class="env-form-element__control">
+                <input type="text" class="env-form-input" id="text" name="imageLink" placeholder="<%= i18n('adLink') %>" />
+            </div>
+        </div>
+        <!-- PRICE -->
+        <div class="env-form-element">
+            <label for="text" class="env-form-element__label"><%= i18n('adPrice') %></label>
+            <div class="env-form-element__control">
+                <input type="number" class="env-form-input" id="text" name="price" placeholder="<%= i18n('adLink') %>" />
+            </div>
+        </div>
+        <!-- CONTROL -->
         <div class="env-form-element">
             <input class="env-button env-button--primary" type="submit" value="Spara Ändringar" />
             <a href="<%= getUrl('/') %>" class="env-button env-button--secondary"><%= i18n('showAll') %></a>

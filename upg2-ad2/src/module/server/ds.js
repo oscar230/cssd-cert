@@ -39,8 +39,18 @@ define((require) => {
     },
     edit: (id, ad) => {
       try {
-        ads.set(id, ad);
-        return true;
+        if (
+          typeof ad.title !== 'undefined'
+          && typeof ad.content !== 'undefined'
+          && typeof ad.link !== 'undefined'
+          && typeof ad.price !== 'undefined'
+          && typeof ad.imageLink === 'undefined'
+          && typeof ad.contact === 'undefined'
+        ) {
+          ads.set(id, ad);
+          return true;
+        }
+        return false;
       } catch (e) {
         logUtil.error(e);
         return e;

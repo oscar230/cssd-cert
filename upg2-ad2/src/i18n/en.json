@@ -14,9 +14,13 @@
    "addAnother": "Add another ad",
    "add": "Add an ad",
    "adTitle": "Ad title",
-   "adMessage": "Ad message",
+   "adMessage": "Ad description",
    "adLink": "Ad link",
    "report": "Report abuse",
    "control": "Control panel",
-   "back": "Back"
+   "back": "Back",
+   "configEmail": "Contact information for the ad representative",
+   "configNumber": "Maximum amount of concurrent ads by a single user",
+   "adPrice": "Price",
+   "adImageLink": "Link to image"
 }

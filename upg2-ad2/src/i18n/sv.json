@@ -14,9 +14,13 @@
    "addAnother": "Lägg till annu en annons",
    "add": "Lägg till en annons",
    "adTitle": "Annonstitel",
-   "adMessage": "Annonsmeddelande",
+   "adMessage": "Annonsbeskrivning",
    "adLink": "Annonslänk",
    "report": "Rapportera missbruk",
    "control": "Control panel",
-   "back": "Tillbaka"
+   "back": "Tillbaka",
+   "configEmail": "Annonsplatsansvariges kontaktinformation",
+   "configNumber": "Max antal annonser en användare får ha publicerade samtidigt",
+   "adPrice": "Pris",
+   "adImageLink": "Länk till bild"
 }
