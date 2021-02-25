@@ -7,6 +7,7 @@ define((require) => {
   const displayTemplate = require('/template/display');
   const addTemplate = require('/template/add');
   const editTemplate = require('/template/edit');
+  const reportTemplate = require('/template/report');
 
   return Component.extend({
     // Selector for templates based on route
@@ -19,6 +20,9 @@ define((require) => {
       }
       if (this.state.route === '/edit') {
         return editTemplate;
+      }
+      if (this.state.route === '/report') {
+        return reportTemplate;
       }
       // Fallback
       return template;

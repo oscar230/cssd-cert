@@ -5,6 +5,9 @@
     <form action="<%= getUrl('/rnd') %>" method="post">
         <button type="submit" name="id" class="env-button env-button"><%= i18n('rnd') %></button>
     </form>
+    <form action="<%= getUrl('/removeall') %>" method="post">
+        <button type="submit" name="id" class="env-button env-button--danger"><%= i18n('removeAll') %></button>
+    </form>
 </div>
 <table class="env-table env-table--zebra env-table--borders-bottom" style="width: 100%;">
     <thead>

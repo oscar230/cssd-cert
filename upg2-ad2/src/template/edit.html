@@ -1,6 +1,6 @@
 <h1><%= i18n('title') %></h1>
 <p><%= i18n('messageEdit') %></p>
-<form class="env-form" action="<%= getUrl('/add') %>" method="post">
+<form class="env-form" action="<%= getUrl('/edit', {id: ad.dsid}) %>" method="post">
     <div class="env-form">
         <!-- TITLE -->
         <div class="env-form-element">
@@ -39,7 +39,7 @@
         </div>
         <!-- CONTROL -->
         <div class="env-form-element">
-            <input class="env-button env-button--primary" type="submit" value="Spara Ändringar" />
+            <input class="env-button env-button--primary" type="submit" value="<%= i18n('edit') %>" />
             <a href="<%= getUrl('/') %>" class="env-button env-button--secondary"><%= i18n('showAll') %></a>
         </div>
     </div>

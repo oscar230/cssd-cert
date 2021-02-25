@@ -8,17 +8,15 @@
         <div class="env-w--100 env-d--flex env-flex-wrap--wrap">
             <!-- For everyone, info. -->
             <div class="env-w--100 env-button-group env-m-bottom--xxx-small" role="group">
-                <a href="<%= getUrl('/ad', { id:dsid }) %>" type="button" class="env-w--50 env-button env-button--primary"><%= i18n('show') %></a>
+                <a href="<%= getUrl('/ad', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('show') %></a>
                 <% if(owner !== contact){ %>
-                    <a href="<%= getUrl('/report', { id:dsid }) %>" type="button" class="env-w--50 env-button env-button--danger"><%= i18n('report') %></a>
+                    <a href="<%= getUrl('/report', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('report') %></a>
                 <% } %>
-            </div>
-            <!-- For users, tools. -->
-            <div class="env-w--100 env-button-group env-m-top--xxx-small" role="group">
-                <a href="<%= getUrl('/edit', { id:dsid }) %>" type="button" class="env-w--50 env-button env-button--primary"><%= i18n('edit') %></a>
+                <!-- For users, tools. -->
+                <a href="<%= getUrl('/edit', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('edit') %></a>
                 <% if(owner === contact){ %>
                     <form action="<%= getUrl('/remove') %>" method="post">
-                        <button type="submit" name="id" value="<%= dsid %>" class="env-w--50 env-button env-button--danger"><%= i18n('remove') %></button>
+                        <button type="submit" name="id" value="<%= dsid %>" class="env-w--100 env-button env-button--danger"><%= i18n('remove') %></button>
                     </form>
                 <% } %>
             </div>

@@ -14,6 +14,7 @@
    "show": "Show ad",
    "edit": "Edit",
    "remove": "Remove",
+   "removeAll": "Remove all",
    "added": "Ad added",
    "addAnother": "Add another ad",
    "add": "Add an ad",
@@ -27,5 +28,6 @@
    "configNumber": "Maximum amount of concurrent ads by a single user",
    "adPrice": "Price",
    "adImageLink": "Link to image",
-   "rnd": "Generate a random ad"
+   "rnd": "Generate a random ad",
+   "reason": "Reason"
 }

@@ -14,6 +14,7 @@
    "show": "Visa",
    "edit": "Redigera",
    "remove": "Ta bort",
+   "removeAll": "Ta bort alla",
    "added": "Annons tillagd",
    "addAnother": "Lägg till annu en annons",
    "add": "Lägg till en annons",
@@ -27,5 +28,6 @@
    "configNumber": "Max antal annonser en användare får ha publicerade samtidigt",
    "adPrice": "Pris",
    "adImageLink": "Länk till bild",
-   "rnd": "Slumpgenerera en annons"
+   "rnd": "Slumpgenerera en annons",
+   "reason": "Anledning"
 }
