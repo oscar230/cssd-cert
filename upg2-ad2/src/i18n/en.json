@@ -1,5 +1,9 @@
 {
    "title": "Ad viewer!",
+   "messageAdd": "Add an ad",
+   "messageEdit": "Edit an ad",
+   "messageMain": "Ads overview",
+   "messageReport": "Report an offensive ad",
    "showingAll": "This is a list of all ads.",
    "showingAllAdded": "Added a new ad! This is a list of all ads.",
    "showingAllEdited": "Edited an ad! This is a list of all ads.",

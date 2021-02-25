@@ -1,0 +1,18 @@
+<h1><%= i18n('title') %></h1>
+<p><%= i18n('messageReport') %></p>
+<form class="env-form" action="<%= getUrl('/add') %>" method="post">
+    <div class="env-form">
+        <!-- TITLE -->
+        <div class="env-form-element">
+            <label for="text" class="env-form-element__label"><%= i18n('adTitle') %></label>
+            <div class="env-form-element__control">
+                <input type="text" class="env-form-input" id="text" name="title" placeholder="<%= i18n('adTitle') %>" />
+            </div>
+        </div>
+        <!-- CONTROL -->
+        <div class="env-form-element">
+            <input class="env-button env-button--primary" type="submit" value="Spara Ändringar" />
+            <a href="<%= getUrl('/') %>" class="env-button env-button--secondary"><%= i18n('showAll') %></a>
+        </div>
+    </div>
+</form>

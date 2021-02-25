@@ -4,8 +4,15 @@
 define((require) => {
   const Component = require('Component');
   const template = require('/template/ad');
+  const user = require('/module/server/user');
+
   return Component.extend({
     tagName: 'tr',
     template,
+    filterState() {
+      return {
+        owner: user.currentUserId(),
+      };
+    },
   });
 });

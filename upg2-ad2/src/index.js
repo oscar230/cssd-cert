@@ -7,6 +7,24 @@
   const user = require('/module/server/user');
   const randomAd = require('/module/server/randomAd');
 
+  // Users need to authenticate before.
+  const authenticatedPaths = [
+    '/ad',
+    '/add',
+    '/edit',
+    '/rnd',
+    '/add',
+  ];
+
+  // Middleware for authenticated links
+  router.use((req, res, next) => {
+    if (authenticatedPaths.includes(req.path) && user.currentUserId() === 'Anonymous') {
+      res.send('<p><b>Error!</b><br>You need to authenticate before performing this opertion!</p><br><a href="/">Go home</a>');
+    } else {
+      next();
+    }
+  });
+
   // HTML for all list and ROOT
   router.get('/', (req, res) => {
     res.render('/', {
@@ -31,6 +49,18 @@
     res.render('/edit', {
       ad: ads.get(req.params.id),
     });
+  });
+
+  // HTML for reporting
+  router.get('/report', (req, res) => {
+    const ad = ads.get(req.params.id);
+    if (typeof ad !== 'undefined' && user.currentUserId() !== ad.contact) {
+      res.render('/report', {
+        ad,
+      });
+    } else {
+      res.send('<p>You cannot report your own content!</p>');
+    }
   });
 
   // DS Random ad
@@ -77,6 +107,11 @@
     res.render('/', {
       adList: ads.get(),
     });
+  });
+
+  // DS Report
+  router.post('/report', (req, res) => {
+    // TODO
   });
 }());
 

@@ -1,5 +1,9 @@
 {
    "title": "Annonsvisare!",
+   "messageAdd": "Skapa en annons",
+   "messageEdit": "Redigera en annons",
+   "messageMain": "Annonsöverblick",
+   "messageReport": "Rapportera en annons för missbruk",
    "showingAll": "Detta är en lista med alla annonser.",
    "showingAllAdded": "Lade till ny annons. Detta är en lista med alla annonser.",
    "showingAllEdited": "Redigerade annons. Detta är en lista med alla annonser.",
