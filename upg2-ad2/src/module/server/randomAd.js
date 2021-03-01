@@ -28,9 +28,17 @@ define((require) => {
       price: Math.floor(Math.random() * Math.floor(1000)),
       imageLink: 'https://picsum.photos/200/300',
       contact: user,
-      contactName: `Debug User (${user})`,
       contactNumber: '054-444 44 44',
       contactEmail: 'oscar.andersson@soleil.se',
+      reports: [
+        {
+          reason: 'Debuganledning 1',
+          user: 'Användare 1',
+        }, {
+          reason: 'Debuganledning 2',
+          user: 'Användare 2',
+        },
+      ],
     }),
   };
 });

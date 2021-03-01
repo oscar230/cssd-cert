@@ -74,18 +74,17 @@
 
   // DS Add
   router.post('/add', (req, res) => {
-    const r = ads.add({
+    ads.add({
       title: req.params.title,
       content: req.params.content,
       link: req.params.link,
       price: req.params.price,
       imageLink: req.params.imageLink,
       contact: user.currentUserId(),
-      contactName: user.currentUser(),
       contactNumber: req.params.contactNumber,
       contactEmail: req.params.contactEmail,
+      reports: [],
     });
-    res.send(JSON.stringify(r));
     res.render('/', {
       adList: ads.get(),
     });
@@ -99,7 +98,10 @@
       link: req.params.link,
       price: req.params.price,
       imageLink: req.params.imageLink,
-      reports: req.params.reports,
+      contact: user.currentUserId(),
+      contactNumber: req.params.contactNumber,
+      contactEmail: req.params.contactEmail,
+      reports: ads.get(req.params.id).reports,
     });
     res.render('/', {
       adList: ads.get(),
@@ -128,8 +130,8 @@
   // DS Report
   router.post('/report', (req, res) => {
     try {
-      let ad = ads.get(req.params.id);
-      ad = ad.reports.push({
+      const ad = ads.get(req.params.id);
+      ad.reports.append({
         reason: req.params.reason,
         user: user.currentUserId(),
       });

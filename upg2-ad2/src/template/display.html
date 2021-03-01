@@ -7,9 +7,16 @@
     </div>
 </form>
 <hr>
-<h2 class="env-text"><%= ad.title %></h2>
-<p class="env-text"><%= ad.content %></p>
+<h2 class="env-text"><a href="<%= ad.link %>"><%= ad.title %></a></h2>
+<p class="env-text"><%= i18n('price') %>: <%= ad.price %> SEK</p>
+<p><a href="<%= ad.link %>"><%= i18n('adLink') %></a></p>
+<p class="env-text">
+    <b><%= ad.contact %></b>
+    <a href="email:<%= ad.contactEmail %>"><%= i18n('contactEmail') %></a>
+    <a href="tel:<%= ad.contactNumber %>"><%= i18n('contactNumber') %></a>
+</p>
 <img
-    src="https://unsplash.it/900/400/"
+    src="<%= ad.imageLink %>"
     alt="Image"
 />
+<p class="env-text"><%= ad.content %></p>
