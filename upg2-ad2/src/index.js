@@ -81,6 +81,9 @@
       price: req.params.price,
       imageLink: req.params.imageLink,
       contact: user.currentUserId(),
+      contactName: user.currentUser(),
+      contactNumber: req.params.contactNumber,
+      contactEmail: req.params.contactEmail,
     });
     res.send(JSON.stringify(r));
     res.render('/', {
