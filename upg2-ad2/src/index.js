@@ -135,7 +135,7 @@
   router.post('/report', (req, res) => {
     const ad = ads.get(req.params.id);
     const subject = 'Your ad has been reported.';
-    const content = `A report has been filed for ad ${ad.title}, that you a responsible for.`;
+    const content = `A report has been filed for ad ${ad.title}, that you a responsible for. Reason for report is: ${req.params.reason}`;
     res.send(mail.send(ad.contactEmail, content, subject));
     res.render('/', {
       adList: ads.get(),

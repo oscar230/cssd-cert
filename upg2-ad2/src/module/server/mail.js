@@ -7,10 +7,10 @@ define((require) => {
     try {
       mailBuilder.setSubject(subject)
         .setTextMessage(content)
-        .addRecipient('oscar.andersson@soleil.se')
+        .addRecipient(adress)
         .build()
         .send();
-      return 'Mail sent.';
+      return `Mail sent to ${adress}.`;
     } catch (e) {
       logUtil.error(e);
       return JSON.stringify(e);
