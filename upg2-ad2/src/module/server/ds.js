@@ -41,10 +41,6 @@ define((require) => {
       try {
         if (
           typeof ad.title !== 'undefined'
-          && typeof ad.content !== 'undefined'
-          && typeof ad.link !== 'undefined'
-          && typeof ad.price !== 'undefined'
-          && typeof ad.imageLink === 'undefined'
           && typeof ad.contact === 'undefined'
         ) {
           ads.set(id, ad);

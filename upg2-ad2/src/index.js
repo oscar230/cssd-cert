@@ -6,6 +6,7 @@
   const ads = require('/module/server/ds');
   const user = require('/module/server/user');
   const randomAd = require('/module/server/randomAd');
+  const logUtil = require('LogUtil');
 
   // Users need to authenticate before.
   const authenticatedPaths = [
@@ -95,6 +96,7 @@
       link: req.params.link,
       price: req.params.price,
       imageLink: req.params.imageLink,
+      reports: req.params.reports,
     });
     res.render('/', {
       adList: ads.get(),
@@ -109,9 +111,34 @@
     });
   });
 
+  // DS Remove all
+  router.post('removeAll', (req, res) => {
+    const CUI = user.currentUserId();
+    ads.get()
+      .filter((adc) => adc.contact === CUI)
+      .forEach((adr) => ads.remove(adr.dsid));
+    res.render('/', {
+      adList: ads.get(),
+    });
+  });
+
   // DS Report
   router.post('/report', (req, res) => {
-    ad;
+    try {
+      let ad = ads.get(req.params.id);
+      ad = ad.reports.push({
+        reason: req.params.reason,
+        user: user.currentUserId(),
+      });
+      ads.edit(ad.id, ad);
+      res.send(JSON.stringify(ads.get(ad.id).reports));
+    } catch (e) {
+      logUtil.error(e);
+      res.send(JSON.stringify(e));
+    }
+    res.render('/', {
+      adList: ads.get(),
+    });
   });
 }());
 
