@@ -37,6 +37,21 @@
                 <input type="number" class="env-form-input" id="text" name="price" placeholder="<%= i18n('adPrice') %>" />
             </div>
         </div>
+        <!-- CONTACT NUMBER AND EMAIL -->
+        <div class="env-form env-form--inline">
+            <div class="env-form-element">
+                <label for="text" class="env-form-element__label"><%= i18n('contactNumber') %></label>
+                <div class="env-form-element__control">
+                    <input type="tel" class="env-form-input" id="tel" name="contactNumber" placeholder="<%= i18n('contactNumber') %>" />
+                </div>
+            </div>
+            <div class="env-form-element">
+                <label for="text" class="env-form-element__label"><%= i18n('contactEmail') %></label>
+                <div class="env-form-element__control">
+                    <input type="email" class="env-form-input" id="email" name="contactEmail" placeholder="<%= i18n('contactEmail') %>" />
+                </div>
+            </div>
+        </div>
         <!-- CONTROL -->
         <div class="env-form-element">
             <input class="env-button env-button--primary" type="submit" value="Spara Ändringar" />

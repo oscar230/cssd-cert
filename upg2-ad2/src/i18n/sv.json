@@ -29,5 +29,8 @@
    "adPrice": "Pris",
    "adImageLink": "Länk till bild",
    "rnd": "Slumpgenerera en annons",
-   "reason": "Anledning"
+   "reason": "Anledning",
+   "reload": "Ladda om",
+   "contactEmail": "E-postadress",
+   "contactNumber": "Telefonnummer"
 }

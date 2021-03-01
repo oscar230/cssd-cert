@@ -29,5 +29,8 @@
    "adPrice": "Price",
    "adImageLink": "Link to image",
    "rnd": "Generate a random ad",
-   "reason": "Reason"
+   "reason": "Reason",
+   "reload": "Reload",
+   "contactEmail": "E Mail",
+   "contactNumber": "Phone number"
 }
