@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 /* eslint-disable import/no-absolute-path */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
@@ -6,6 +7,7 @@
   const ads = require('/module/server/ds');
   const user = require('/module/server/user');
   const randomAd = require('/module/server/randomAd');
+  const mail = require('/module/server/mail');
   const logUtil = require('LogUtil');
 
   // Users need to authenticate before.
@@ -35,8 +37,10 @@
 
   // HTML get one specfic
   router.get('/ad', (req, res) => {
+    const ad = ads.get(req.params.id);
     res.render('/ad', {
-      ad: ads.get(req.params.id),
+      ad,
+      reports: ad.reports,
     });
   });
 
@@ -129,18 +133,10 @@
 
   // DS Report
   router.post('/report', (req, res) => {
-    try {
-      const ad = ads.get(req.params.id);
-      ad.reports.append({
-        reason: req.params.reason,
-        user: user.currentUserId(),
-      });
-      ads.edit(ad.id, ad);
-      res.send(JSON.stringify(ads.get(ad.id).reports));
-    } catch (e) {
-      logUtil.error(e);
-      res.send(JSON.stringify(e));
-    }
+    const ad = ads.get(req.params.id);
+    const subject = 'Your ad has been reported.';
+    const content = `A report has been filed for ad ${ad.title}, that you a responsible for.`;
+    res.send(mail.send(ad.contactEmail, content, subject));
     res.render('/', {
       adList: ads.get(),
     });

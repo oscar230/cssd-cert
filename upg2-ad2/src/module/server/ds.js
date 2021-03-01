@@ -41,7 +41,7 @@ define((require) => {
       try {
         if (
           typeof ad.title !== 'undefined'
-          && typeof ad.contact === 'undefined'
+          && typeof ad.contact !== 'undefined'
         ) {
           ads.set(id, ad);
           return true;
