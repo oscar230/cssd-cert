@@ -1,3 +1,3 @@
 node_modules
 .dev_properties.json
-dist/*
+dist
