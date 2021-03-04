@@ -1,0 +1,28 @@
+<div class="nyhetslistning">
+   <h1 class="env-text">
+      Nyhetsskript
+   </h1>
+   <p class="env-text">
+      Visar $count st. artiklar.
+   </p>
+   <ul>
+      #foreach( $element in $list )
+      <li>
+         <div class="env-mw--100">
+            <h3 class="env-text">
+               $!element.title
+            </h3>
+            <p class="env-text">
+               $!element.description
+            </p>
+            <span class="env-w--100">
+               $!element.image
+            </span>
+            <p class="env-text">
+               $!element.content
+            </p>
+         </div>
+      </li>
+      #end
+   </ul>
+</div>
