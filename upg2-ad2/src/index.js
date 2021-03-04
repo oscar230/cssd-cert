@@ -8,11 +8,9 @@
   const user = require('/module/server/user');
   const randomAd = require('/module/server/randomAd');
   const mail = require('/module/server/mail');
-  const logUtil = require('LogUtil');
 
   // Users need to authenticate before.
   const authenticatedPaths = [
-    '/ad',
     '/add',
     '/edit',
     '/rnd',
@@ -32,10 +30,11 @@
   router.get('/', (req, res) => {
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
-  // HTML get one specfic
+  // HTML get ad and display
   router.get('/ad', (req, res) => {
     const ad = ads.get(req.params.id);
     res.render('/ad', {
