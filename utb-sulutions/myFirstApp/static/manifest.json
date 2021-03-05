@@ -1,0 +1,9 @@
+{
+  "id": "myWebApp",
+  "version": "0.0.3",
+  "name": "Min första app",
+  "author": "SiteVision AB",
+  "description": "En första webapp-labb",
+  "helpUrl": "https://developer.sitevision.se/webapps",
+  "type": "WebApp"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "EventAndStore",
+  "version": "0.0.1",
+  "name": "Event and store",
+  "author": "SiteVision AB",
+  "description": "app2",
+  "helpUrl": "https://developer.sitevision.se/webapps",
+  "type": "WebApp"
+}

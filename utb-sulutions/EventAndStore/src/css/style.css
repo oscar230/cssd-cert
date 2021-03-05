@@ -1,0 +1,47 @@
+.webapp-boilerplate h4 {
+   color: #5AB42D;
+}
+
+.main-wrapper {
+   border: 2px dotted green;
+}
+
+.main-header {
+   background-color: green;
+   padding: 5px;
+   color: #fff;
+   margin: 0 0 10px 0;
+}
+
+.propertyForm-wrapper {
+   border: 2px dotted blue;
+}
+
+.propertyForm-header {
+   background-color: blue;
+   padding: 5px;
+   color: #fff;
+   margin: 0 0 10px 0;
+}
+
+.propertyDisplay-wrapper {
+   border: 2px dotted red;
+}
+
+.propertyDisplay-header {
+   background-color: red;
+   padding: 5px;
+   color: #fff;
+   margin: 0 0 10px 0;
+}
+
+.storeDisplay-wrapper {
+   border: 2px dotted purple;
+}
+
+.storeDisplay-header {
+   background-color: purple;
+   padding: 5px;
+   color: #fff;
+   margin: 0 0 10px 0;
+}

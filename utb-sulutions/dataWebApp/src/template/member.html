@@ -1,0 +1,20 @@
+<td>
+    <%- name %>
+</td>
+<td>
+    <%- email %>
+</td>
+<td>
+    <%- age %>
+</td>
+<td>
+    <a href="<%= getUrl('/edit', {id:dsid}) %>">Redigera</a>
+</td>
+<td>
+    <form class="env-form" method="post" action="<%= getUrl('/remove', {dsid:dsid}) %>">
+        <div class="env-form-element">
+            <input class="env-button env-button--small env-button--danger" type="submit" value="Radera" />
+        </div>
+    </form>
+</td>
+  

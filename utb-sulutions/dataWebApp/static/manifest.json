@@ -1,0 +1,12 @@
+{
+  "id": "dataWebApp",
+  "version": "0.0.1",
+  "name": "DataStore WebApp",
+  "author": "Oscar",
+  "description": "A WebApp with DataStore!",
+  "helpUrl": "soleil.se",
+  "type": "WebApp",
+  "storage": {
+    "collectionDataStore": "members2"
+  }
+}

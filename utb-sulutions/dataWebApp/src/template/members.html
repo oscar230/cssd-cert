@@ -1,0 +1,23 @@
+<table class="env-table">
+    <thead>
+       <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Edit</th>
+          <th>Delete</th>
+       </tr>
+    </thead>
+    <%= renderer.renderComponent('Members') %>
+ </table>
+ <h4>Search member</h4>
+ <form class="env-form" action="<%= getUrl('/search') %>" method="post">
+    <div class="env-form-element">
+       <div class="envx-form-element__control">
+          <input autocomplete="off" type="text" class="env-form-input" placeholder="Search name" name="name">
+       </div>
+    </div>
+    <div class="env-form-element">
+       <input class="env-button env-button--primary" type="submit" value="Search" />
+    </div>
+</form>

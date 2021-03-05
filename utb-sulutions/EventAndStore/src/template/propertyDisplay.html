@@ -1,0 +1,9 @@
+<p class="propertyDisplay-header">PropertyDisplay</p>
+
+<h5>Här visar vi resultatet:</h5>
+
+<% if (property) { %>
+   <strong><%- property %>:</strong> <%- propertyValue %> 
+<% } else { %> 
+   Ingen egenskap är begärd. 
+<% } %>

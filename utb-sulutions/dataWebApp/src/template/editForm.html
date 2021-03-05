@@ -1,0 +1,20 @@
+<form class="env-form" action="<%= getUrl('/editMember', {dsid:member.dsid}) %>" method="post">
+    <div class="env-form-element">
+       <div class="env-form-element__control">
+          <input autocomplete="off" type="text" class="env-form-input" value="<%- member.name %>" name="name">
+       </div>
+    </div>
+    <div class="env-form-element">
+       <div class="env-form-element__control">
+          <input autocomplete="off" type="email" value="<%- member.email %>" class="env-form-input" name="email">
+       </div>
+    </div>
+    <div class="env-form-element">
+       <div class="env-form-element__control">
+          <input autocomplete="off" type="number" value="<%- member.age %>" class="env-form-input" name="age">
+       </div>
+    </div>
+    <div class="env-form-element">
+       <input class="env-button env-button--primary" type="submit" value="Spara Ã¤ndringar" />
+    </div>
+</form>

@@ -1,0 +1,9 @@
+{
+  "id": "myFirstRestApp",
+  "version": "0.0.1",
+  "name": "RESTApp",
+  "author": "Oscar",
+  "description": "rest1",
+  "helpUrl": "https://developer.sitevision.se/restapps",
+  "type": "RESTApp"
+}
