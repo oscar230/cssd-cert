@@ -8,6 +8,7 @@
   const user = require('/module/server/user');
   const randomAd = require('/module/server/randomAd');
   const mail = require('/module/server/mail');
+  let appData = require('appData');
 
   // Users need to authenticate before.
   const authenticatedPaths = [
@@ -16,6 +17,8 @@
     '/rnd',
     '/add',
   ];
+
+  const maxAdsPerUser = parseInt(appData.get('maxNum'), 10);
 
   // Middleware for authenticated links
   router.use((req, res, next) => {
@@ -69,27 +72,37 @@
 
   // DS Random ad
   router.post('/rnd', (req, res) => {
-    ads.add(randomAd.getAd(user.currentUserId()));
+    if (ads.get().filter((a) => a.contact === user.currentUserId()).length < maxAdsPerUser) {
+      ads.add(randomAd.getAd(user.currentUserId()));
+    } else {
+      res.send('<p>Ad limit reached!</p>');
+    }
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
   // DS Add
   router.post('/add', (req, res) => {
-    ads.add({
-      title: req.params.title,
-      content: req.params.content,
-      link: req.params.link,
-      price: req.params.price,
-      imageLink: req.params.imageLink,
-      contact: user.currentUserId(),
-      contactNumber: req.params.contactNumber,
-      contactEmail: req.params.contactEmail,
-      reports: [],
-    });
+    if (ads.get().filter((a) => a.contact === user.currentUserId()).length < maxAdsPerUser) {
+      ads.add({
+        title: req.params.title,
+        content: req.params.content,
+        link: req.params.link,
+        price: req.params.price,
+        imageLink: req.params.imageLink,
+        contact: user.currentUserId(),
+        contactNumber: req.params.contactNumber,
+        contactEmail: req.params.contactEmail,
+        reports: [],
+      });
+    } else {
+      res.send('<p>Ad limit reached!</p>');
+    }
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
@@ -108,6 +121,7 @@
     });
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
@@ -116,6 +130,7 @@
     ads.remove(req.params.id);
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
@@ -127,6 +142,7 @@
       .forEach((adr) => ads.remove(adr.dsid));
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 
@@ -138,6 +154,7 @@
     res.send(mail.send(ad.contactEmail, content, subject));
     res.render('/', {
       adList: ads.get(),
+      anon: user.currentUserId() === 'Anonymous',
     });
   });
 }());

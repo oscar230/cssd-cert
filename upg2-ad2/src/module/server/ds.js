@@ -4,7 +4,6 @@ define((require) => {
   const storage = require('storage');
   const ads = storage.getCollectionDataStore('ads');
   const logUtil = require('LogUtil');
-
   const MAX = 100;
 
   return {
