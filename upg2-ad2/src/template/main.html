@@ -17,13 +17,40 @@
 <br>
 <table class="env-table env-table--zebra env-table--borders-bottom" style="width: 100%;">
     <caption><%= i18n('ads') %></caption>
-    <tr>
-        <th scope="col">
-            <%= i18n('adTitle') %>
-        </th>
-        <th scope="col">
-            <%= i18n('control') %>
-        </th>
-    </tr>
-    <%= renderer.renderComponent('Ads') %>
+    <thead>
+        <tr>
+            <th scope="col">
+                <%= i18n('adTitle') %>
+            </th>
+            <th scope="col">
+                <%= i18n('control') %>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(ad of adList) { %>
+            <tr>
+                <th scope="row">
+                    Annons: <a href="<%= getUrl('/ad', { id:ad.dsid }) %>"><%= ad.title %></a>
+                    <br>
+                    <p class="env-text"><%= ad.price %> SEK</p>
+                </th>
+                <td>
+                    <span class="env-w--100 env-d--flex env-flex-wrap--wrap">
+                        <span class="env-w--100 env-button-group env-m-bottom--xxx-small" role="group">
+                            <a href="<%= getUrl('/ad', { id:ad.dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('show') %> <%= ad.title %></a>
+                            <% if(owner !== ad.contact && owner !== "Anonymous"){ %>
+                                <a href="<%= getUrl('/report', { id:ad.dsid }) %>" type="button" class="env-w--100 env-button env-button--success"><%= i18n('report') %> <%= ad.title %></a>
+                            <% } else if(owner === ad.contact) { %>
+                                <a href="<%= getUrl('/edit', { id:ad.dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('edit') %> <%= ad.title %></a>
+                                <form action="<%= getUrl('/remove') %>" method="post">
+                                    <button type="submit" name="id" value="<%= ad.dsid %>" class="env-w--100 env-button env-button--danger"><%= i18n('remove') %> <%= ad.title %></button>
+                                </form>
+                            <% } %>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
 </table>
