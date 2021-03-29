@@ -33,5 +33,6 @@
    "reason": "Reason",
    "reload": "Reload",
    "contactEmail": "E Mail",
-   "contactNumber": "Phone number"
+   "contactNumber": "Phone number",
+   "ads": "Ads"
 }

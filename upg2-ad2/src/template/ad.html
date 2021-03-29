@@ -1,22 +1,22 @@
 <span class="ad-card">
-    <td>
-        <a href="<%= getUrl('/ad', { id:dsid }) %>"><%= title %></a>
+    <th scope="row">
+        Annons: <a href="<%= getUrl('/ad', { id:dsid }) %>"><%= title %></a>
         <br>
         <p class="env-text"><%= price %> SEK</p>
-    </td>
+    </th>
     <td>
-        <div class="env-w--100 env-d--flex env-flex-wrap--wrap">
-            <div class="env-w--100 env-button-group env-m-bottom--xxx-small" role="group">
-                <a href="<%= getUrl('/ad', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('show') %></a>
+        <span class="env-w--100 env-d--flex env-flex-wrap--wrap">
+            <span class="env-w--100 env-button-group env-m-bottom--xxx-small" role="group">
+                <a href="<%= getUrl('/ad', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('show') %> <%= title %></a>
                 <% if(owner !== contact && owner !== "Anonymous"){ %>
-                    <a href="<%= getUrl('/report', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--success"><%= i18n('report') %></a>
+                    <a href="<%= getUrl('/report', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--success"><%= i18n('report') %> <%= title %></a>
                 <% } else if(owner === contact) { %>
-                    <a href="<%= getUrl('/edit', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('edit') %></a>
+                    <a href="<%= getUrl('/edit', { id:dsid }) %>" type="button" class="env-w--100 env-button env-button--primary"><%= i18n('edit') %> <%= title %></a>
                     <form action="<%= getUrl('/remove') %>" method="post">
-                        <button type="submit" name="id" value="<%= dsid %>" class="env-w--100 env-button env-button--danger"><%= i18n('remove') %></button>
+                        <button type="submit" name="id" value="<%= dsid %>" class="env-w--100 env-button env-button--danger"><%= i18n('remove') %> <%= title %></button>
                     </form>
                 <% } %>
-            </div>
-        </div>
+            </span>
+        </span>
     </td>
 </span>
