@@ -34,6 +34,7 @@
     res.render('/', {
       adList: ads.get(),
       anon: user.currentUserId() === 'Anonymous',
+      canAdd: ads.get().filter((a) => a.contact === user.currentUserId()).length < maxAdsPerUser,
     });
   });
 

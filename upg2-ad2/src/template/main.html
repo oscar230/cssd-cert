@@ -2,10 +2,12 @@
 <p class="env-text"><%= i18n('messageMain') %></p>
 <% if(!anon){ %>
     <div class="env-w--100 env-d--flex env-flex-wrap--wrap">
-        <a href="<%= getUrl('/add') %>" class="env-button env-button--primary"><%= i18n('add') %></a>
-        <form action="<%= getUrl('/rnd') %>" method="post">
-            <button type="submit" name="id" class="env-button env-button"><%= i18n('rnd') %></button>
-        </form>
+        <% if(canAdd){ %>
+            <a href="<%= getUrl('/add') %>" class="env-button env-button--primary"><%= i18n('add') %></a>
+            <form action="<%= getUrl('/rnd') %>" method="post">
+                <button type="submit" name="id" class="env-button env-button"><%= i18n('rnd') %></button>
+            </form>
+        <% } %>
         <form action="<%= getUrl('/removeAll') %>" method="post">
             <button type="submit" name="id" class="env-button env-button--danger"><%= i18n('removeAll') %></button>
         </form>
